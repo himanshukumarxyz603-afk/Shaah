@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#FFD1DC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Happy Birthday Princess Samikshaaaa 🌸👑</title>
+
+  <!-- Google Fonts: Romantic, Cursive & Elegant Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Canvas: Continuous Fairy Dust & Falling Lily Petals -->
+  <canvas id="fairyDustCanvas" class="fairy-canvas"></canvas>
+
+  <!-- Audio Elements: Local Romantic Song ("Hua Hai Aaj Pehli Baar") + Local Happy Birthday Song -->
+  <audio id="romanticBgm" loop preload="auto" playsinline src="audio/romantic-song.mp3"></audio>
+  <audio id="birthdaySong" loop preload="auto" playsinline src="audio/happy-birthday.wav"></audio>
+
+  <!-- Floating Music Player (Mobile Optimized) -->
+  <div class="music-pill-widget" id="musicWidget">
+    <div class="music-disc" id="musicDisc">
+      <i class="fa-solid fa-compact-disc music-disc-icon"></i>
+    </div>
+    <div class="music-info">
+      <span class="music-title" id="musicTitle">Hua Hai Aaj Pehli Baar 🎵</span>
+      <span class="music-status" id="musicStatus">Tap to Play 💕</span>
+    </div>
+    <button class="music-toggle-btn" id="musicToggleBtn" aria-label="Play or Pause Music">
+      <i class="fa-solid fa-play" id="musicBtnIcon"></i>
+    </button>
+  </div>
+
+  <!-- Floating Lily Wish Button -->
+  <button class="wish-wand-btn" id="wishWandBtn" title="Make a Birthday Wish!">
+    <span class="wand-icon">🌸</span>
+    <span class="wand-text">Make a Wish</span>
+  </button>
+
+  <!-- Hidden Easter Egg Heart (Task 3: Secret Romantic Message) -->
+  <button class="easter-egg-heart" id="secretHeartBtn" title="A little secret for you...">
+    <span class="easter-heart-pulse">💖</span>
+    <span class="easter-heart-glow"></span>
+  </button>
+
+  <!-- Shooting Star Container -->
+  <div class="shooting-star-container" id="shootingStarContainer"></div>
+
+  <!-- ============================================== -->
+  <!-- MAIN PAGE WRAPPER -->
+  <!-- ============================================== -->
+  <main class="page-wrapper" id="mainContent">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO SECTION (With Samikshaaaa's Photo) -->
+    <!-- ============================================ -->
+    <section class="section hero-section" id="heroSection">
+      <!-- Floating Pastel Birthday Balloons -->
+      <div class="balloons-container" id="balloonsContainer"></div>
+
+      <!-- Disney Castle Animated Silhouette Background -->
+      <div class="castle-backdrop">
+        <svg class="castle-svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="castleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFD1DC" stop-opacity="0.95"/>
+              <stop offset="50%" stop-color="#E0A9AF" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#B76E79" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#FFD1DC" stop-opacity="0.4"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#castleGrad)">
+            <polygon points="400,60 415,120 385,120" />
+            <rect x="388" y="120" width="24" height="150" />
+            <polygon points="400,20 408,60 392,60" />
+            <path d="M400,20 L425,30 L400,40 Z" fill="#FFD700" opacity="0.9" />
+            <polygon points="340,110 355,160 325,160" />
+            <rect x="330" y="160" width="20" height="120" />
+            <polygon points="460,110 475,160 445,160" />
+            <rect x="450" y="160" width="20" height="120" />
+            <polygon points="280,160 295,200 265,200" />
+            <rect x="270" y="200" width="20" height="110" />
+            <polygon points="520,160 535,200 505,200" />
+            <rect x="510" y="200" width="20" height="110" />
+            <rect x="290" y="220" width="220" height="120" />
+            <rect x="290" y="208" width="15" height="14" />
+            <rect x="315" y="208" width="15" height="14" />
+            <rect x="360" y="208" width="15" height="14" />
+            <rect x="425" y="208" width="15" height="14" />
+            <rect x="470" y="208" width="15" height="14" />
+            <rect x="495" y="208" width="15" height="14" />
+            <path d="M375,340 C375,290 425,290 425,340 Z" fill="#753a43" />
+            <ellipse cx="400" cy="150" rx="4" ry="8" fill="#FFF0B5" />
+            <ellipse cx="340" cy="190" rx="3" ry="6" fill="#FFF0B5" />
+            <ellipse cx="460" cy="190" rx="3" ry="6" fill="#FFF0B5" />
+          </g>
+          <path d="M0,350 Q200,320 400,340 T800,330 L800,450 L0,450 Z" fill="url(#cloudGrad)" />
+          <path d="M0,380 Q300,350 600,375 T800,360 L800,450 L0,450 Z" fill="#FFF9FA" opacity="0.9" />
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <!-- Princess Badge -->
+        <div class="princess-crown-badge" data-aos="zoom-in">
+          <span class="lily-tag-icon">🌸</span>
+          <span class="badge-label">Today's Birthday Queen</span>
+          <span class="lily-tag-icon">👑</span>
+        </div>
+
+        <!-- Specially Designed Mobile Portrait Frame for Samikshaaaa -->
+        <div class="hero-portrait-stage" data-aos="zoom-in" data-aos-delay="150">
+          <div class="portrait-glowing-halo"></div>
+          <div class="portrait-crown-pin">
+            <i class="fa-solid fa-crown portrait-tiara-icon"></i>
+          </div>
+          <div class="hero-portrait-frame">
+            <img src="images/samikshaaaa.jpg" alt="Princess Samikshaaaa" class="hero-portrait-img">
+            <div class="portrait-overlay-gradient"></div>
+            <div class="portrait-flower-badge">🌸 My Queen 🌸</div>
+          </div>
+        </div>
+
+        <h2 class="hero-tagline" data-aos="fade-down" data-aos-delay="250">
+          Happy Birthday, My Pretty Lily,
+        </h2>
+
+        <h1 class="hero-name glowing-text" data-aos="zoom-in" data-aos-delay="350">
+          Princess Samikshaaaa
+        </h1>
+
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="450">
+          You look more gorgeous than every princess in fairy tales. Today the whole world celebrates you, my love! 🌸✨
+        </p>
+
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="550">
+          <a href="#scannerSection" class="royal-pill-btn">
+            <span>Start My Surprises</span>
+            <i class="fa-solid fa-sparkles"></i>
+          </a>
+        </div>
+
+        <div class="scroll-invitation" data-aos="fade-up" data-aos-delay="650">
+          <span class="scroll-text">Scroll down for magic 👇</span>
+          <i class="fa-solid fa-chevron-down bouncing-arrow"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. GAME 1: PRINCESS FINGERPRINT SCANNER -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="scannerSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Step 1: Security Check 👑</span>
+          <h2 class="section-title">Princess Fingerprint Scanner</h2>
+          <p class="section-desc">
+            Place your thumb on the scanner to verify that you are the real Princess Samikshaaaa!
+          </p>
+        </div>
+
+        <div class="scanner-card glassmorphism">
+          <div class="scanner-status" id="scannerStatus">
+            <span class="status-dot"></span>
+            <span class="status-text" id="scannerStatusText">Touch & hold your thumb below</span>
+          </div>
+
+          <div class="scanner-pad-wrapper">
+            <div class="scan-ring ring-1"></div>
+            <div class="scan-ring ring-2"></div>
+            <div class="scan-ring ring-3"></div>
+
+            <div class="scanner-pad" id="scannerPad" role="button" aria-label="Fingerprint Scanner">
+              <div class="laser-beam" id="laserBeam"></div>
+              <svg class="thumbprint-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,15 C30,15 20,30 20,50 C20,70 30,85 30,105" />
+                <path d="M50,25 C36,25 30,38 30,52 C30,70 40,85 40,105" />
+                <path d="M50,35 C42,35 38,44 38,55 C38,72 45,85 48,105" />
+                <path d="M50,5 C25,5 10,25 10,50 C10,75 22,95 22,115" />
+                <path d="M50,45 C47,45 45,50 45,58 C45,72 50,85 52,105" />
+                <path d="M50,15 C70,15 80,30 80,50 C80,70 70,85 70,105" />
+                <path d="M50,25 C64,25 70,38 70,52 C70,70 60,85 60,105" />
+                <path d="M50,35 C58,35 62,44 62,55 C62,72 55,85 52,105" />
+                <path d="M50,5 C75,5 90,25 90,50 C90,75 78,95 78,115" />
+              </svg>
+              <div class="scanner-instructions">
+                <i class="fa-solid fa-fingerprint thumb-icon"></i>
+                <span class="scan-instruction-text">TOUCH & HOLD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scan-progress-container">
+            <div class="scan-progress-bar" id="scanProgressBar"></div>
+          </div>
+          <div class="scan-percent" id="scanPercent">0% Scanned</div>
+
+          <p class="scan-tip">💡 Hold your finger down until it hits 100%!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. GAME 2: THE NAUGHTY QUIZ -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="quizSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Step 2: Cute Quiz 💋</span>
+          <h2 class="section-title">The Kiss Quiz</h2>
+          <p class="section-desc">
+            Think carefully before choosing, Princess! Your answer will be recorded 🙈
+          </p>
+        </div>
+
+        <div class="quiz-card glassmorphism" id="quizCard">
+          <div class="quiz-icon-header">
+            <span class="quiz-emoji">💋</span>
+            <span class="quiz-hearts-glow">💖</span>
+          </div>
+
+          <h3 class="quiz-question">"Aaj kitne ghante kisses chahiye?"</h3>
+          <p class="quiz-subtext">Choose your daily kiss limit...</p>
+
+          <div class="quiz-arena" id="quizArena">
+            <!-- Dodging Buttons -->
+            <button class="quiz-option-btn dodge-btn" id="dodgeBtn1">
+              <span class="btn-emoji">🥺</span> 1 Hour
+            </button>
+
+            <button class="quiz-option-btn dodge-btn" id="dodgeBtn2">
+              <span class="btn-emoji">😚</span> 2 Hours
+            </button>
+
+            <!-- Clickable Button -->
+            <button class="quiz-option-btn unlimited-btn" id="unlimitedBtn">
+              <span class="btn-emoji">🥰</span> Unlimited Kisses! 💖
+            </button>
+          </div>
+
+          <div class="quiz-toast" id="quizToast">Try clicking the other options if you can! 😜</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. GAME 3: SCRATCH CARDS -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="scratchSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Step 3: Birthday Gifts 🎁</span>
+          <h2 class="section-title">Scratch & Win Your Coupons!</h2>
+          <p class="section-desc">
+            Rub with your finger on the cards to scratch off the golden layer and see your gifts!
+          </p>
+        </div>
+
+        <div class="scratch-cards-grid">
+          <!-- Card 1 -->
+          <div class="scratch-card-box glassmorphism" id="scratchBox1">
+            <div class="scratch-card-header">
+              <span class="card-badge">Coupon #1</span>
+              <span class="card-hint-text">Scratch 40% to reveal</span>
+            </div>
+
+            <div class="canvas-wrapper">
+              <div class="secret-prize-content" id="prize1">
+                <div class="prize-emoji">🍨✨</div>
+                <h4 class="prize-title">Late Night Ice Cream Date!</h4>
+                <div class="prize-validity">Valid Tonight & Anytime You Crave!</div>
+                <p class="prize-desc">
+                  Unlimited scoops of your favorite flavor, chocolate fudge, and late night car drives with me.
+                </p>
+                <div class="redeem-code">CODE: ICE-CREAM-QUEEN</div>
+              </div>
+
+              <canvas id="scratchCanvas1" class="scratch-canvas" width="320" height="240"></canvas>
+            </div>
+
+            <div class="card-scratch-status" id="scratchStatus1">
+              <i class="fa-solid fa-hand-sparkles"></i> Rub your finger here!
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="scratch-card-box glassmorphism" id="scratchBox2">
+            <div class="scratch-card-header">
+              <span class="card-badge">Coupon #2</span>
+              <span class="card-hint-text">Scratch 40% to reveal</span>
+            </div>
+
+            <div class="canvas-wrapper">
+              <div class="secret-prize-content" id="prize2">
+                <div class="prize-emoji">✈️🌅</div>
+                <h4 class="prize-title">A Romantic Trip Out of Town!</h4>
+                <div class="prize-validity">All-Expenses Paid by Boyfriend</div>
+                <p class="prize-desc">
+                  Pack your bags Princess! We are going on a road trip wherever you choose—mountains or beach!
+                </p>
+                <div class="redeem-code">CODE: PRINCESS-VACATION</div>
+              </div>
+
+              <canvas id="scratchCanvas2" class="scratch-canvas" width="320" height="240"></canvas>
+            </div>
+
+            <div class="card-scratch-status" id="scratchStatus2">
+              <i class="fa-solid fa-hand-sparkles"></i> Rub your finger here!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. BLOOM A LILY GARDEN (Her Favorite Flower) -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="lilyGardenSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Her Favorite Flower 🌸</span>
+          <h2 class="section-title">Bloom a Lily for Samikshaaaa</h2>
+          <p class="section-desc">
+            Since lilies are your favorite flowers, tap on the closed buds below to bloom them and read a sweet note!
+          </p>
+        </div>
+
+        <div class="lily-garden-card glassmorphism">
+          <div class="lily-flowers-row">
+            <!-- Lily 1 -->
+            <div class="lily-flower-item" data-msg="You have the most beautiful smile in the whole world! 🌸">
+              <div class="lily-icon-wrap">
+                <span class="lily-bloom-icon">🌱</span>
+              </div>
+              <span class="lily-click-tag">Tap to Bloom</span>
+            </div>
+
+            <!-- Lily 2 -->
+            <div class="lily-flower-item" data-msg="You make every single day of my life feel like magic! 💕">
+              <div class="lily-icon-wrap">
+                <span class="lily-bloom-icon">🌱</span>
+              </div>
+              <span class="lily-click-tag">Tap to Bloom</span>
+            </div>
+
+            <!-- Lily 3 -->
+            <div class="lily-flower-item" data-msg="Prettier and gentler than any flower on Earth. I love you! 💖">
+              <div class="lily-icon-wrap">
+                <span class="lily-bloom-icon">🌱</span>
+              </div>
+              <span class="lily-click-tag">Tap to Bloom</span>
+            </div>
+          </div>
+
+          <div class="lily-revealed-msg" id="lilyRevealedMsg">
+            Tap a lily bud above to reveal your message! 🌸✨
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. GAME 4: LOVE METER SLIDER -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="loveMeterSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Step 4: Love Test 💖</span>
+          <h2 class="section-title">The Royal Love-O-Meter</h2>
+          <p class="section-desc">
+            Slide the heart to show how much you love me:
+          </p>
+        </div>
+
+        <div class="love-meter-card glassmorphism">
+          <h3 class="love-question">"Tum mujhe kitna pyaar karti ho?"</h3>
+
+          <div class="love-heart-wrapper">
+            <div class="beating-heart" id="beatingHeart">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+
+          <div class="love-value-display" id="loveValueDisplay">
+            <span class="love-main-val" id="loveMainVal">100%</span>
+            <span class="love-quote-val" id="loveQuoteVal">"A cute start! 💕"</span>
+          </div>
+
+          <div class="slider-wrapper">
+            <input type="range" min="100" max="1000" value="100" step="10" class="custom-love-slider" id="loveSlider">
+            <div class="slider-labels">
+              <span>100% (Minimum)</span>
+              <span>500%</span>
+              <span class="infinite-label">Infinity & Beyond! 🚀</span>
+            </div>
+          </div>
+
+          <p class="love-verdict-note">
+            *Notice that zero doesn't even exist! You have to love me a lot! 🥰
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. GAME 5: KISSING MARATHON CHALLENGE -->
+    <!-- ============================================ -->
+    <section class="section game-section" id="kissMarathonSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Step 5: Speed Challenge ⏱️💋</span>
+          <h2 class="section-title">10-Second Kiss Marathon</h2>
+          <p class="section-desc">
+            Tap the big glowing heart as fast as you can in 10 seconds! Let's see how many kisses you can send!
+          </p>
+        </div>
+
+        <div class="marathon-card glassmorphism">
+          <div class="marathon-hud">
+            <div class="hud-box timer-box">
+              <span class="hud-label"><i class="fa-regular fa-clock"></i> Time Left</span>
+              <span class="hud-value" id="marathonTimer">10.0s</span>
+            </div>
+            <div class="hud-box score-box">
+              <span class="hud-label"><i class="fa-solid fa-kiss-wink-heart"></i> Kisses Sent</span>
+              <span class="hud-value" id="marathonScore">0</span>
+            </div>
+          </div>
+
+          <div class="marathon-tap-arena" id="marathonTapArena">
+            <button class="marathon-heart-btn" id="marathonHeartBtn" aria-label="Tap to send kiss">
+              <span class="heart-kiss-icon">💋</span>
+            </button>
+            <div class="tap-hint-text" id="marathonTapHint">Tap the heart to start!</div>
+          </div>
+
+          <!-- Result Card -->
+          <div class="marathon-result-card glassmorphism" id="marathonResultCard" style="display: none;">
+            <div class="result-trophy">🏆</div>
+            <h4 class="result-score-title">Time's Up Princess!</h4>
+            <div class="final-score-display">
+              Total Score: <span id="finalScoreVal">0</span> Kisses! 💋
+            </div>
+            <p class="final-score-comment" id="finalScoreComment">
+              Super fast! You earned that exact number of real kisses tonight! 🥰
+            </p>
+            <button class="royal-btn restart-btn" id="marathonRestartBtn">
+              <i class="fa-solid fa-rotate-right"></i> Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 8. NEW: 10 REASONS WHY I LOVE YOU (Flip Cards) -->
+    <!-- ============================================ -->
+    <section class="section reasons-section" id="reasonsSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Sweet Little Truths 💌</span>
+          <h2 class="section-title">10 Reasons Why I Love You</h2>
+          <p class="section-desc">
+            Tap on any card to flip it and read why my heart belongs to you, Samikshaaaa! 💕
+          </p>
+        </div>
+
+        <div class="reasons-flip-grid" id="reasonsGrid">
+          <!-- Card 1 -->
+          <div class="reason-card-flip" data-index="1">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#1</span>
+                <span class="reason-icon">✨</span>
+                <h4 class="reason-front-title">Your Smile</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #1 💕</span>
+                <h4 class="reason-back-title">Your Beautiful Smile</h4>
+                <p class="reason-back-desc">
+                  Because your smile can brighten even my darkest, most exhausting day without saying a single word.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reason-card-flip" data-index="2">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#2</span>
+                <span class="reason-icon">🍲</span>
+                <h4 class="reason-front-title">How You Care</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #2 💕</span>
+                <h4 class="reason-back-title">The Sweet Way You Care</h4>
+                <p class="reason-back-desc">
+                  Because you always ask if I ate on time and scold me with so much love when I forget to sleep.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reason-card-flip" data-index="3">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#3</span>
+                <span class="reason-icon">🥺</span>
+                <h4 class="reason-front-title">Your Cute Pouts</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #3 💕</span>
+                <h4 class="reason-back-title">The Dramatic Pouts</h4>
+                <p class="reason-back-desc">
+                  Because even when you are dramatic or angry with me, you still look like the cutest little baby.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="reason-card-flip" data-index="4">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#4</span>
+                <span class="reason-icon">🌸</span>
+                <h4 class="reason-front-title">Love For Lilies</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #4 💕</span>
+                <h4 class="reason-back-title">Your Gentle Soul</h4>
+                <p class="reason-back-desc">
+                  Because your love for fresh white lilies reflects how pure, gentle, and peaceful your heart truly is.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="reason-card-flip" data-index="5">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#5</span>
+                <span class="reason-icon">🌙</span>
+                <h4 class="reason-front-title">2 AM Talks</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #5 💕</span>
+                <h4 class="reason-back-title">Midnight Conversations</h4>
+                <p class="reason-back-desc">
+                  Because talking to you at 2 AM about everything and nothing is my absolute favorite part of the day.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="reason-card-flip" data-index="6">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#6</span>
+                <span class="reason-icon">🤍</span>
+                <h4 class="reason-front-title">Your Pure Heart</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #6 💕</span>
+                <h4 class="reason-back-title">Your Golden Kindness</h4>
+                <p class="reason-back-desc">
+                  Because you feel things deeply, love with all your soul, and bring so much warmth to everyone around you.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="reason-card-flip" data-index="7">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#7</span>
+                <span class="reason-icon">👀</span>
+                <h4 class="reason-front-title">Your Eyes</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #7 💕</span>
+                <h4 class="reason-back-title">The Way You Look At Me</h4>
+                <p class="reason-back-desc">
+                  Because whenever our eyes meet, I feel like the happiest and most blessed guy in the whole world.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="reason-card-flip" data-index="8">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#8</span>
+                <span class="reason-icon">🤝</span>
+                <h4 class="reason-front-title">Safe In Your Arms</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #8 💕</span>
+                <h4 class="reason-back-title">My Safest Haven</h4>
+                <p class="reason-back-desc">
+                  Because holding your hand makes every worry, fear, and insecurity vanish into thin air.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="reason-card-flip" data-index="9">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#9</span>
+                <span class="reason-icon">🎶</span>
+                <h4 class="reason-front-title">Your Laugh</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #9 💕</span>
+                <h4 class="reason-back-title">My Favorite Melody</h4>
+                <p class="reason-back-desc">
+                  Because your genuine, uncontrollable giggle is the most precious sound I have ever heard.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="reason-card-flip" data-index="10">
+            <div class="reason-card-inner">
+              <div class="reason-front glassmorphism">
+                <span class="reason-number">#10</span>
+                <span class="reason-icon">👑</span>
+                <h4 class="reason-front-title">Simply You</h4>
+                <span class="flip-prompt-pill">Tap to Read 🌸</span>
+              </div>
+              <div class="reason-back glassmorphism">
+                <span class="reason-tag-back">Reason #10 💕</span>
+                <h4 class="reason-back-title">Because You Are Samikshaaaa</h4>
+                <p class="reason-back-desc">
+                  Because out of 8 billion people on this planet, my soul recognized yours. You are my forever girl.
+                </p>
+                <span class="card-sparkle">💖</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 9. NEW: PRINCESS LOVE COUPONS (Scratch & Redeem) -->
+    <!-- ============================================ -->
+    <section class="section coupons-section" id="couponsSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Redeemable Anytime 🎟️💕</span>
+          <h2 class="section-title">Princess Love Coupons</h2>
+          <p class="section-desc">
+            Five special passes just for you! Scratch or tap on each coupon to redeem it whenever you want.
+          </p>
+        </div>
+
+        <div class="coupons-grid">
+          <!-- Coupon 1 -->
+          <div class="love-coupon-card glassmorphism" id="couponCard1">
+            <div class="coupon-seal-stamp">REDEEMED 💕</div>
+            <div class="coupon-content">
+              <div class="coupon-icon">🫂✨</div>
+              <span class="coupon-tier">VIP Pass #1</span>
+              <h4 class="coupon-name">Free 5-Minute Warm Hug</h4>
+              <p class="coupon-text">
+                Valid anytime you are stressed, sad, or just craving a tight, warm hug. Never expires!
+              </p>
+              <button class="coupon-action-btn" data-coupon="1">
+                <i class="fa-solid fa-gift"></i>
+                <span>Tap to Redeem</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Coupon 2 -->
+          <div class="love-coupon-card glassmorphism" id="couponCard2">
+            <div class="coupon-seal-stamp">REDEEMED 💕</div>
+            <div class="coupon-content">
+              <div class="coupon-icon">🕯️🍽️</div>
+              <span class="coupon-tier">VIP Pass #2</span>
+              <h4 class="coupon-name">Surprise Candlelight Date</h4>
+              <p class="coupon-text">
+                A romantic date planned 100% by me with your favorite meals, flowers, and romantic vibes.
+              </p>
+              <button class="coupon-action-btn" data-coupon="2">
+                <i class="fa-solid fa-gift"></i>
+                <span>Tap to Redeem</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Coupon 3 -->
+          <div class="love-coupon-card glassmorphism" id="couponCard3">
+            <div class="coupon-seal-stamp">REDEEMED 💕</div>
+            <div class="coupon-content">
+              <div class="coupon-icon">🍕🧁</div>
+              <span class="coupon-tier">VIP Pass #3</span>
+              <h4 class="coupon-name">Her Favourite Dinner Date</h4>
+              <p class="coupon-text">
+                You choose the restaurant and whatever you crave. Boyfriend will gladly pay the bill!
+              </p>
+              <button class="coupon-action-btn" data-coupon="3">
+                <i class="fa-solid fa-gift"></i>
+                <span>Tap to Redeem</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Coupon 4 -->
+          <div class="love-coupon-card glassmorphism" id="couponCard4">
+            <div class="coupon-seal-stamp">REDEEMED 💕</div>
+            <div class="coupon-content">
+              <div class="coupon-icon">🚗🌌</div>
+              <span class="coupon-tier">VIP Pass #4</span>
+              <h4 class="coupon-name">Midnight Long Drive</h4>
+              <p class="coupon-text">
+                Late night car drive under the stars with our favorite songs playing softly and cool night wind.
+              </p>
+              <button class="coupon-action-btn" data-coupon="4">
+                <i class="fa-solid fa-gift"></i>
+                <span>Tap to Redeem</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Coupon 5 -->
+          <div class="love-coupon-card glassmorphism" id="couponCard5">
+            <div class="coupon-seal-stamp">REDEEMED 💕</div>
+            <div class="coupon-content">
+              <div class="coupon-icon">🍨🍫</div>
+              <span class="coupon-tier">VIP Pass #5</span>
+              <h4 class="coupon-name">Unlimited Ice Cream Night</h4>
+              <p class="coupon-text">
+                As many scoops, sundaes, and toppings as your heart desires, straight to your hands!
+              </p>
+              <button class="coupon-action-btn" data-coupon="5">
+                <i class="fa-solid fa-gift"></i>
+                <span>Tap to Redeem</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 10. MAGICAL BUTTON: PASSWORD PROTECTED SECRET VAULT -->
+    <!-- ============================================ -->
+    <section class="section vault-trigger-section" id="vaultTriggerSection">
+      <div class="section-container" data-aos="zoom-in">
+        <div class="secret-vault-teaser-card glassmorphism">
+          <div class="teaser-lock-icon-wrap">
+            <i class="fa-solid fa-lock-keyhole teaser-lock-icon"></i>
+            <span class="teaser-heart-bubble">💖</span>
+          </div>
+          <span class="section-tag">Couples Only • Top Secret 🔐</span>
+          <h2 class="teaser-title">Himanshu & Samikshaaaa's Secret Vault</h2>
+          <p class="teaser-desc">
+            A hidden romantic photo album locked with our private password! Only you and I know the secret key.
+          </p>
+          <button class="royal-btn open-vault-trigger-btn" id="openVaultModalBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Unlock Secret Gallery</span>
+            <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 11. REDESIGNED SECRET PHOTO GALLERY: "OUR LITTLE FAIRY TALE" -->
+    <!-- Task 2: Fairy Lights + Swaying Polaroids + Love Book Mode + Heartbeat Title -->
+    <!-- ============================================ -->
+    <section class="section secret-gallery-section" id="secretGallerySection" style="display: none;">
+      <!-- Cute Floating Teddy Bear Holding Heart Balloon -->
+      <div class="cute-heart-bearer-anim">
+        <div class="floating-bear-heart">
+          <span class="cute-bear">🧸</span>
+          <span class="flying-love-balloon">🎈💖</span>
+        </div>
+      </div>
+
+      <!-- Soft Glowing Bokeh Circles -->
+      <div class="bokeh-container">
+        <span class="bokeh b1"></span>
+        <span class="bokeh b2"></span>
+        <span class="bokeh b3"></span>
+        <span class="bokeh b4"></span>
+      </div>
+
+      <div class="section-container">
+        <!-- Heartbeat Animated Title -->
+        <div class="section-header">
+          <div class="heartbeat-crown-wrap">
+            <i class="fa-solid fa-heart heartbeat-royal-icon"></i>
+          </div>
+          <span class="section-tag">✨ Unlocked: Himanshika's Special Vault ✨</span>
+          <h2 class="section-title cursive-title">Our Little Fairy Tale</h2>
+          <p class="section-desc">
+            10 magical chapters of our love story. Swaying polaroids above, and a Love Book to flip through below!
+          </p>
+        </div>
+
+        <!-- 1. FAIRY LIGHTS STRUNG WITH DANGLING POLAROIDS -->
+        <div class="fairy-lights-wire-container">
+          <div class="fairy-wire-line">
+            <span class="wire-bulb bulb-1"></span>
+            <span class="wire-bulb bulb-2"></span>
+            <span class="wire-bulb bulb-3"></span>
+            <span class="wire-bulb bulb-4"></span>
+            <span class="wire-bulb bulb-5"></span>
+            <span class="wire-bulb bulb-6"></span>
+          </div>
+
+          <!-- Horizontally Touch-Scrollable Swaying Polaroids Strip -->
+          <div class="hanging-polaroids-scroll" id="hangingPolaroidsScroll">
+            <!-- Polaroid 1 -->
+            <div class="hanging-polaroid sway-left" data-photo="1">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo1.jpg" alt="Princess Samikshaaaa" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">👑 Queen</span>
+              </div>
+              <p class="polaroid-tag-text">My Real Princess</p>
+            </div>
+
+            <!-- Polaroid 2 (Heart Shaped) -->
+            <div class="hanging-polaroid sway-right heart-border-polaroid" data-photo="2">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame heart-frame-mini">
+                <img src="images/gallery/photo2.jpg" alt="First Love" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">💕 Heart</span>
+              </div>
+              <p class="polaroid-tag-text">First Time I Fell</p>
+            </div>
+
+            <!-- Polaroid 3 -->
+            <div class="hanging-polaroid sway-left" data-photo="3">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo3.jpg" alt="Ice Cream Date" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🍨 Scoops</span>
+              </div>
+              <p class="polaroid-tag-text">Late Night Ice Cream</p>
+            </div>
+
+            <!-- Polaroid 4 -->
+            <div class="hanging-polaroid sway-right" data-photo="4">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo4.jpg" alt="Holding Hands" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">✨ Safe</span>
+              </div>
+              <p class="polaroid-tag-text">Safe in Your Hands</p>
+            </div>
+
+            <!-- Polaroid 5 -->
+            <div class="hanging-polaroid sway-left" data-photo="5">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo5.jpg" alt="Cute Pouts" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🙈 Drama</span>
+              </div>
+              <p class="polaroid-tag-text">Cutest Drama Queen</p>
+            </div>
+
+            <!-- Polaroid 6 -->
+            <div class="hanging-polaroid sway-right" data-photo="6">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo6.jpg" alt="Road Trips" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🚗 Road Trip</span>
+              </div>
+              <p class="polaroid-tag-text">Long Drive Partner</p>
+            </div>
+
+            <!-- Polaroid 7 (Heart Shaped) -->
+            <div class="hanging-polaroid sway-left heart-border-polaroid" data-photo="7">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame heart-frame-mini">
+                <img src="images/gallery/photo7.jpg" alt="Birthday Girl" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🎂 Special</span>
+              </div>
+              <p class="polaroid-tag-text">My Birthday Queen</p>
+            </div>
+
+            <!-- Polaroid 8 -->
+            <div class="hanging-polaroid sway-right" data-photo="8">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo8.jpg" alt="White Lilies" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🌸 Lilies</span>
+              </div>
+              <p class="polaroid-tag-text">Her Favorite Flower</p>
+            </div>
+
+            <!-- Polaroid 9 -->
+            <div class="hanging-polaroid sway-left" data-photo="9">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame">
+                <img src="images/gallery/photo9.jpg" alt="Stargazing" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">🌟 Stars</span>
+              </div>
+              <p class="polaroid-tag-text">Under the Starry Sky</p>
+            </div>
+
+            <!-- Polaroid 10 (Heart Shaped) -->
+            <div class="hanging-polaroid sway-right heart-border-polaroid" data-photo="10">
+              <div class="clothes-clip">📌</div>
+              <div class="polaroid-photo-frame heart-frame-mini">
+                <img src="images/gallery/photo10.jpg" alt="Forever & Always" class="polaroid-img" loading="lazy">
+                <span class="polaroid-badge">💍 Forever</span>
+              </div>
+              <p class="polaroid-tag-text">Himanshu & Samikshaaaa</p>
+            </div>
+          </div>
+          <p class="scroll-hint-sub">👈 Swipe polaroids or flip the Love Book below 👉</p>
+        </div>
+
+        <!-- 2. "LOVE BOOK" MODE: 3D PHOTO ALBUM -->
+        <div class="love-book-wrapper">
+          <div class="book-royal-ribbon">📖 Fairy Tale Memory Book</div>
+
+          <div class="love-book-stage" id="loveBookStage">
+            <!-- Book Container with 10 Pages -->
+            <div class="love-book-album" id="loveBookAlbum">
+
+              <!-- Page 1 -->
+              <div class="book-page active" data-page="1">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🌸</div>
+                  <div class="page-corner-decor tr">🌸</div>
+                  <div class="page-number-tag">Memory 1 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo1.jpg" data-zoom-title="My Real Princess 👑" data-zoom-text="The day you walked into my life, my world found its queen. You are more breathtaking than any fairytale.">
+                    <img src="images/gallery/photo1.jpg" alt="My Real Princess" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 1: The Queen Arrives</h4>
+                    <p class="page-cursive-text">
+                      "From the moment I met you, every day started feeling like a fairy tale. You will always be my only princess."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 2 (Heart Shaped Frame) -->
+              <div class="book-page" data-page="2">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">💖</div>
+                  <div class="page-corner-decor tr">💖</div>
+                  <div class="page-number-tag">Memory 2 of 10</div>
+                  <div class="photo-frame-heart" data-zoom-src="images/gallery/photo2.jpg" data-zoom-title="First Time I Fell 💫" data-zoom-text="One sweet look into your eyes, and I knew my heart was completely and irrevocably yours.">
+                    <div class="heart-shape-mask">
+                      <img src="images/gallery/photo2.jpg" alt="First Love" class="book-photo-img" loading="lazy">
+                    </div>
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 2: The Spark</h4>
+                    <p class="page-cursive-text">
+                      "I still remember the exact moment my heart whispered: 'Yes, this is the girl I want to love forever.'"
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 3 -->
+              <div class="book-page" data-page="3">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🍨</div>
+                  <div class="page-corner-decor tr">🌸</div>
+                  <div class="page-number-tag">Memory 3 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo3.jpg" data-zoom-title="Ice Cream & Giggles 🍨" data-zoom-text="Nothing in this world tastes sweeter than sharing midnight scoops of your favorite ice cream.">
+                    <img src="images/gallery/photo3.jpg" alt="Ice Cream Date" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 3: Midnight Treats</h4>
+                    <p class="page-cursive-text">
+                      "Late night ice cream runs with you in the car, laughing at silly jokes, are my happiest memories."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 4 -->
+              <div class="book-page" data-page="4">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🤝</div>
+                  <div class="page-corner-decor tr">✨</div>
+                  <div class="page-number-tag">Memory 4 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo4.jpg" data-zoom-title="Holding Your Hand ✨" data-zoom-text="Your hand in mine feels like coming home after a long journey. Safe, warm, and forever mine.">
+                    <img src="images/gallery/photo4.jpg" alt="Holding Hands" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 4: Hand in Hand</h4>
+                    <p class="page-cursive-text">
+                      "No matter how crowded the street is, the only hand I ever want to hold for the rest of my life is yours."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 5 -->
+              <div class="book-page" data-page="5">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🥺</div>
+                  <div class="page-corner-decor tr">🌸</div>
+                  <div class="page-number-tag">Memory 5 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo5.jpg" data-zoom-title="Cutest Drama Queen 🙈" data-zoom-text="Even when you cross your arms and make that little dramatic pout, you are the most adorable human alive.">
+                    <img src="images/gallery/photo5.jpg" alt="Drama Queen" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 5: Sweet Little Pouts</h4>
+                    <p class="page-cursive-text">
+                      "I love you even when you're mad at me, because even your little anger is filled with cute innocence."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 6 -->
+              <div class="book-page" data-page="6">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🚗</div>
+                  <div class="page-corner-decor tr">🌅</div>
+                  <div class="page-number-tag">Memory 6 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo6.jpg" data-zoom-title="Long Drive Partner 🚗" data-zoom-text="Windows rolled down, our favorite playlist on repeat, and you singing along beside me.">
+                    <img src="images/gallery/photo6.jpg" alt="Road Trips" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 6: Road Trips</h4>
+                    <p class="page-cursive-text">
+                      "I could drive forever on any highway in the world, as long as you are sitting in the passenger seat beside me."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 7 (Heart Shaped Frame) -->
+              <div class="book-page" data-page="7">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🎂</div>
+                  <div class="page-corner-decor tr">👑</div>
+                  <div class="page-number-tag">Memory 7 of 10</div>
+                  <div class="photo-frame-heart" data-zoom-src="images/gallery/photo7.jpg" data-zoom-title="My Birthday Queen 🎂" data-zoom-text="Today is the day my universe was blessed with you. I celebrate your existence every single second.">
+                    <div class="heart-shape-mask">
+                      <img src="images/gallery/photo7.jpg" alt="Birthday Celebration" class="book-photo-img" loading="lazy">
+                    </div>
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 7: Celebrating You</h4>
+                    <p class="page-cursive-text">
+                      "The day you were born, the stars celebrated. Today, you are the queen of my heart and the center of my life."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 8 -->
+              <div class="book-page" data-page="8">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🌸</div>
+                  <div class="page-corner-decor tr">🌸</div>
+                  <div class="page-number-tag">Memory 8 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo8.jpg" data-zoom-title="Pure Like White Lilies 🌸" data-zoom-text="Just like your beloved lilies, your heart is innocent, fragrant, rare, and deeply cherished.">
+                    <img src="images/gallery/photo8.jpg" alt="White Lilies" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 8: The Lily Flower</h4>
+                    <p class="page-cursive-text">
+                      "Whenever I see a fresh lily, I think of your soft smile. You are the prettiest blossom in the garden of my life."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 9 -->
+              <div class="book-page" data-page="9">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">🌟</div>
+                  <div class="page-corner-decor tr">✨</div>
+                  <div class="page-number-tag">Memory 9 of 10</div>
+                  <div class="photo-frame-golden" data-zoom-src="images/gallery/photo9.jpg" data-zoom-title="Under The Stars 🌟" data-zoom-text="Sitting quietly under the night sky, knowing that of all the beautiful creations, God gave me you.">
+                    <img src="images/gallery/photo9.jpg" alt="Starry Sky" class="book-photo-img" loading="lazy">
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 9: Written in the Stars</h4>
+                    <p class="page-cursive-text">
+                      "Every star in the night sky shines a little brighter tonight because it knows it's Princess Samikshaaaa's birthday."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 10 (Heart Shaped Frame) -->
+              <div class="book-page" data-page="10">
+                <div class="page-paper glassmorphism">
+                  <div class="page-corner-decor tl">💍</div>
+                  <div class="page-corner-decor tr">💖</div>
+                  <div class="page-number-tag">Memory 10 of 10</div>
+                  <div class="photo-frame-heart" data-zoom-src="images/gallery/photo10.jpg" data-zoom-title="Himanshu & Samikshaaaa 💍" data-zoom-text="Forever and always. Through every sunrise, storm, and celebration, my soul is bound to yours.">
+                    <div class="heart-shape-mask">
+                      <img src="images/gallery/photo10.jpg" alt="Forever and Always" class="book-photo-img" loading="lazy">
+                    </div>
+                    <span class="tap-zoom-badge">🔍 Tap to Zoom</span>
+                  </div>
+                  <div class="page-caption-box">
+                    <h4 class="page-memory-title">Chapter 10: Our Forever</h4>
+                    <p class="page-cursive-text">
+                      "You are my beginning, my middle, and my happily ever after. I love you to infinity, Samikshaaaa. — Himanshu"
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Love Book Controls -->
+          <div class="love-book-nav">
+            <button class="book-arrow-btn prev-book-btn" id="loveBookPrevBtn" aria-label="Previous Page">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span>Prev</span>
+            </button>
+            <div class="book-page-indicator" id="loveBookPageIndicator">
+              Memory <strong>1</strong> of 10
+            </div>
+            <button class="book-arrow-btn next-book-btn" id="loveBookNextBtn" aria-label="Next Page">
+              <span>Next</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <p class="book-swipe-tip">👈 Swipe left or right on mobile to turn pages 👉</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 12. GRAND FINALE: 3D CAKE & BLOWABLE CANDLES -->
+    <!-- (Audio switches to Looped Happy Birthday Song) -->
+    <!-- ============================================ -->
+    <section class="section finale-section" id="grandFinaleSection">
+      <!-- Fireworks Canvas -->
+      <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+      <div class="section-container">
+        <!-- 3D Birthday Cake -->
+        <div class="cake-ceremony-wrapper" id="birthdayCakeStage" data-aos="fade-up">
+          <div class="section-header">
+            <span class="section-tag">Grand Birthday Finale 🎂✨</span>
+            <h2 class="section-title">Blow Your Birthday Candles!</h2>
+            <p class="section-desc">
+              Close your eyes, make your biggest wish, and tap the button or candles to blow them out!
+            </p>
+          </div>
+
+          <!-- 3D Layered Cake -->
+          <div class="cake-stage">
+            <div class="birthday-cake" id="birthdayCake">
+              <div class="cake-plate"></div>
+
+              <!-- Bottom Tier -->
+              <div class="cake-tier tier-bottom">
+                <div class="tier-frosting">
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                </div>
+                <div class="tier-decorations">
+                  <span class="cake-pearl"></span>
+                  <span class="cake-pearl"></span>
+                  <span class="cake-pearl"></span>
+                  <span class="cake-pearl"></span>
+                </div>
+              </div>
+
+              <!-- Middle Tier -->
+              <div class="cake-tier tier-middle">
+                <div class="tier-frosting">
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                </div>
+                <div class="tier-decorations">
+                  <span class="cake-berry">🍓</span>
+                  <span class="cake-berry">🌸</span>
+                  <span class="cake-berry">🍓</span>
+                </div>
+              </div>
+
+              <!-- Top Tier -->
+              <div class="cake-tier tier-top">
+                <div class="tier-frosting">
+                  <span class="piping-drop"></span>
+                  <span class="piping-drop"></span>
+                </div>
+                <div class="tier-topper-text">S & H</div>
+              </div>
+
+              <!-- Flickering Candles -->
+              <div class="candles-rack" id="candlesRack">
+                <div class="candle candle-1">
+                  <div class="candle-wick"></div>
+                  <div class="candle-flame"><span class="flame-inner"></span></div>
+                  <div class="candle-smoke"></div>
+                </div>
+                <div class="candle candle-center">
+                  <div class="candle-wick"></div>
+                  <div class="candle-flame"><span class="flame-inner"></span></div>
+                  <div class="candle-smoke"></div>
+                </div>
+                <div class="candle candle-3">
+                  <div class="candle-wick"></div>
+                  <div class="candle-flame"><span class="flame-inner"></span></div>
+                  <div class="candle-smoke"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blow Button -->
+          <div class="blow-action-container">
+            <button class="royal-btn blow-btn" id="blowCandlesBtn">
+              <span class="btn-blow-icon">💨🎂</span>
+              <span class="btn-text" id="blowBtnText">Blow The Candles!</span>
+            </button>
+            <p class="blow-tip-subtext" id="blowTipText">Tap the button or tap on the candles to blow!</p>
+          </div>
+
+          <!-- Post-blow Banner -->
+          <div class="post-blow-banner" id="postBlowBanner">
+            <h3 class="banner-cheer">🎉 HAPPY BIRTHDAY SAMIKSHAAAA! 🎉</h3>
+            <p class="banner-subcheer">May all your wishes and dreams come true, my prettiest lily! 🌸💖✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 13. NEW: TANGLED WISH LANTERNS (Task 3) -->
+    <!-- ============================================ -->
+    <section class="section wish-lanterns-section" id="wishLanternsSection">
+      <div class="lantern-sky-canvas" id="lanternSkyCanvas"></div>
+
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Inspired by Tangled 🏮✨</span>
+          <h2 class="section-title">Send Your Wish to the Stars</h2>
+          <p class="section-desc">
+            Type your deepest birthday wish below. Watch it rise on a glowing lantern and float into the night sky!
+          </p>
+        </div>
+
+        <div class="wish-lantern-card glassmorphism">
+          <div class="lantern-icon-header">
+            <span class="lantern-emoji">🏮</span>
+            <span class="lantern-glow-sparkle">✨</span>
+          </div>
+
+          <div class="wish-input-group">
+            <input type="text" id="userWishInput" class="custom-wish-input" placeholder="Type your biggest wish, Princess Samikshaaaa..." maxlength="120" autocomplete="off">
+            <button class="royal-btn release-lantern-btn" id="releaseWishBtn">
+              <span class="btn-lantern-icon">🏮</span>
+              <span>Release My Lantern</span>
+              <i class="fa-solid fa-sparkles"></i>
+            </button>
+          </div>
+
+          <div class="wish-success-note" id="wishSuccessNote" style="display: none;">
+            ✨ Your lantern has taken flight! The stars are smiling down on you, my princess. 💖
+          </div>
+
+          <!-- Rising Lantern Container -->
+          <div class="active-lanterns-stage" id="activeLanternsStage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 14. TASK 4: THE GRAND FINALE: ROYAL PIGEON LOVE LETTER & PROPOSAL -->
+    <!-- ============================================ -->
+    <section class="section royal-letter-section" id="royalLetterSection">
+      <!-- Golden Hour Clouds Backdrop -->
+      <div class="twilight-sky-backdrop">
+        <div class="twilight-cloud cloud-1"></div>
+        <div class="twilight-cloud cloud-2"></div>
+        <div class="twilight-cloud cloud-3"></div>
+      </div>
+
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Royal Courier from Himanshu 🕊️💌</span>
+          <h2 class="section-title">A Letter From The Heart</h2>
+          <p class="section-desc" id="royalLetterDesc">
+            A royal pigeon has arrived from across the kingdom carrying a letter sealed with love...
+          </p>
+        </div>
+
+        <!-- Royal Desk Stage -->
+        <div class="royal-court-stage" id="royalCourtStage">
+          <!-- Animated Flying Pigeon -->
+          <div class="royal-pigeon-wrapper" id="royalPigeon">
+            <svg class="pigeon-svg" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#FFFFFF" stroke="#E0A9AF" stroke-width="1.5">
+                <!-- Wings -->
+                <path class="pigeon-wing wing-back" d="M40,40 Q60,5 90,15 Q75,35 50,45 Z" fill="#F8BBD0" />
+                <!-- Pigeon Body -->
+                <path d="M25,50 Q10,40 18,30 Q28,25 40,32 Q55,25 70,35 Q90,50 80,68 Q65,80 40,75 Q25,70 20,58 Z" fill="#FFFFFF" />
+                <!-- Head & Eye -->
+                <circle cx="26" cy="33" r="3" fill="#B76E79" />
+                <path d="M16,33 L6,36 L16,39 Z" fill="#FFB74D" />
+                <!-- Golden Ribbon Scroll in Beak -->
+                <g class="pigeon-scroll-beak" id="pigeonScrollInBeak">
+                  <rect x="0" y="38" width="18" height="7" rx="3" fill="#FFF9C4" stroke="#F57F17" stroke-width="1" />
+                  <path d="M9,45 L7,55 L13,52 L19,55 L17,45" fill="#E91E63" />
+                </g>
+                <!-- Wing Front -->
+                <path class="pigeon-wing wing-front" d="M35,45 Q55,10 88,20 Q70,40 45,55 Z" fill="#FFFFFF" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Antique Wooden Table -->
+          <div class="wooden-desk">
+            <!-- Flickering Candle beside the letter -->
+            <div class="desk-candle-wrap">
+              <div class="desk-candle">
+                <div class="candle-flame-real">
+                  <span class="flame-glow"></span>
+                  <span class="flame-core"></span>
+                </div>
+                <div class="desk-candle-body"></div>
+                <div class="candle-base-plate"></div>
+              </div>
+            </div>
+
+            <!-- Sealed Envelope on Desk -->
+            <div class="royal-sealed-envelope" id="royalEnvelope">
+              <div class="envelope-back-fold"></div>
+              <div class="envelope-front-flap" id="envelopeFlap"></div>
+
+              <!-- Red Wax Seal with "H ❤️" -->
+              <div class="red-wax-seal-btn" id="royalWaxSealBtn" role="button" aria-label="Tap to break wax seal and open letter">
+                <div class="seal-inner-circle">
+                  <span class="seal-monogram">H</span>
+                  <i class="fa-solid fa-heart seal-mini-heart"></i>
+                </div>
+                <div class="seal-cracks-overlay" id="sealCracksOverlay"></div>
+              </div>
+
+              <div class="envelope-instruction-pill" id="envelopeInstruction">
+                <span>💌 Tap the Red Wax Seal to Open</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unrolled Vintage Burnt-Edge Parchment Scroll -->
+          <div class="parchment-unroll-container" id="parchmentScroll" style="display: none;">
+            <div class="vintage-parchment-paper">
+              <!-- Burnt Edge & Corner Accents -->
+              <div class="burnt-corner tl"></div>
+              <div class="burnt-corner tr"></div>
+              <div class="burnt-corner bl"></div>
+              <div class="burnt-corner br"></div>
+              <div class="ink-stain-spot spot-1"></div>
+              <div class="ink-stain-spot spot-2"></div>
+
+              <!-- Letter Header -->
+              <div class="parchment-header">
+                <span class="parchment-crest-date">To My Queen • Today & Every Tomorrow</span>
+                <h3 class="parchment-salutation cursive-font">My Dearest Princess Samikshaaaa,</h3>
+              </div>
+
+              <!-- Letter Body (Typewriter Quill Effect) -->
+              <div class="parchment-body cursive-font" id="parchmentLetterText">
+                <!-- Text typed dynamically by JavaScript -->
+              </div>
+              <span class="quill-pen-cursor" id="quillCursor">✒️</span>
+
+              <!-- Proposal Question & Forever Buttons -->
+              <div class="proposal-arena" id="proposalArena" style="display: none;">
+                <div class="proposal-divider">
+                  <span>🌸 💍 🌸</span>
+                </div>
+                <h3 class="proposal-question cursive-font">"Will you be mine forever, Samikshaaaa?"</h3>
+                <p class="proposal-subtext">Choose your destiny, my love...</p>
+
+                <div class="proposal-buttons-wrap" id="proposalButtonsWrap">
+                  <!-- Yes Button -->
+                  <button class="royal-btn proposal-yes-btn" id="proposalYesBtn">
+                    <span class="yes-heart">💖</span>
+                    <span>Yes, Forever & Always!</span>
+                    <span class="yes-ring">💍</span>
+                  </button>
+
+                  <!-- No Button (Runs Away on Touch / Hover) -->
+                  <button class="royal-btn proposal-no-btn" id="proposalNoBtn">
+                    <span>No 😜</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 15. MOBILE VIDEO REELS ZONE (Cloudinary Hosted) -->
+    <!-- ============================================ -->
+    <section class="section video-zone-section" id="videoZoneSection">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Princess Video Reels 🎬💕</span>
+          <h2 class="section-title">Romantic Video Zone</h2>
+          <p class="section-desc">
+            Swipe left or right to watch our special video moments! Videos auto-swipe to the next one when completed. 🍿
+          </p>
+        </div>
+
+        <!-- Mobile Video Carousel / Swiper -->
+        <div class="video-carousel-container" id="videoCarousel">
+          <div class="video-swiper-track" id="videoSwiperTrack">
+            <!-- Slide 1 -->
+            <div class="video-slide active" data-index="0">
+              <div class="video-card glassmorphism">
+                <div class="video-player-wrap">
+                  <video src="https://res.cloudinary.com/iqawqebk/video/upload/v1793708465/video1.mp4" playsinline controls preload="metadata" class="reel-video" id="reelVideo0"></video>
+                  <div class="video-watermark">🌸 Video 01</div>
+                </div>
+                <div class="video-meta">
+                  <h4 class="video-slide-title">Our Sweetest Moments • Reel 1</h4>
+                  <p class="video-slide-sub">Every second with you is a blessing 🌸</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="video-slide" data-index="1">
+              <div class="video-card glassmorphism">
+                <div class="video-player-wrap">
+                  <video src="https://res.cloudinary.com/iqawqebk/video/upload/v1793708462/video2.mp4" playsinline controls preload="metadata" class="reel-video" id="reelVideo1"></video>
+                  <div class="video-watermark">🌸 Video 02</div>
+                </div>
+                <div class="video-meta">
+                  <h4 class="video-slide-title">The Laughs We Shared • Reel 2</h4>
+                  <p class="video-slide-sub">Your smile makes my whole day brighter 💕</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="video-slide" data-index="2">
+              <div class="video-card glassmorphism">
+                <div class="video-player-wrap">
+                  <video src="https://res.cloudinary.com/iqawqebk/video/upload/v1793708423/video3.mp4" playsinline controls preload="metadata" class="reel-video" id="reelVideo2"></video>
+                  <div class="video-watermark">🌸 Video 03</div>
+                </div>
+                <div class="video-meta">
+                  <h4 class="video-slide-title">Holding You Close • Reel 3</h4>
+                  <p class="video-slide-sub">Where I always want to be ✨</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="video-slide" data-index="3">
+              <div class="video-card glassmorphism">
+                <div class="video-player-wrap">
+                  <video src="https://res.cloudinary.com/iqawqebk/video/upload/v1793708462/video4.mp4" playsinline controls preload="metadata" class="reel-video" id="reelVideo3"></video>
+                  <div class="video-watermark">🌸 Video 04</div>
+                </div>
+                <div class="video-meta">
+                  <h4 class="video-slide-title">Forever & Always • Reel 4</h4>
+                  <p class="video-slide-sub">You and me, together through everything 💖</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="video-carousel-nav">
+            <button class="carousel-arrow prev-arrow" id="videoPrevBtn" aria-label="Previous Video">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots">
+              <span class="carousel-dot active" data-index="0"></span>
+              <span class="carousel-dot" data-index="1"></span>
+              <span class="carousel-dot" data-index="2"></span>
+              <span class="carousel-dot" data-index="3"></span>
+            </div>
+            <button class="carousel-arrow next-arrow" id="videoNextBtn" aria-label="Next Video">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <p class="swipe-hint-text">👈 Swipe left or right with your thumb 👉</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 16. ROYAL FOOTER -->
+    <!-- ============================================ -->
+    <footer class="royal-footer">
+      <div class="footer-castle-icon">
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <p class="footer-text">
+        Made with infinite love for Princess <strong>Samikshaaaa</strong> 🌸💖
+      </p>
+      <p class="footer-sub">
+        Happy Birthday Baby • Forever & Always Yours (Himanshu)
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- ==========================================================================
+       ALL POPUPS & MODALS (TASK 1: DIRECT CHILDREN OF BODY FOR 100% CENTERING)
+       ========================================================================== -->
+
+  <!-- 1. The Entry Gate T&C Modal -->
+  <div class="modal-overlay" id="entryModalOverlay">
+    <div class="tc-card glassmorphism">
+      <div class="tc-royal-crest">
+        <span class="crest-flower">🌸</span>
+        <i class="fa-solid fa-crown royal-crown-icon"></i>
+        <span class="crest-flower">🌸</span>
+      </div>
+
+      <h1 class="tc-title">Wait a second, Birthday Girl! 💕</h1>
+      <p class="tc-subtitle">Before entering your magical world, you must agree:</p>
+
+      <div class="tc-content-box">
+        <div class="scroll-badge">Official Agreement 📜</div>
+        <p class="tc-text">
+          "I agree to buy <strong>Samikshaaaa</strong> unlimited ice cream anytime she wants, bring her fresh <strong>Lilies 🌸</strong>, and take her on all the fun trips she desires."
+        </p>
+        <div class="tc-extra-note">
+          *Breaking this rule means non-stop cuddles and kisses forever! 🥰
+        </div>
+      </div>
+
+      <label class="tc-checkbox-container" for="tcAgreement">
+        <input type="checkbox" id="tcAgreement">
+        <span class="custom-checkmark"></span>
+        <span class="tc-checkbox-label">
+          I agree to all terms & promise to stay happy forever 💕
+        </span>
+      </label>
+
+      <button id="enterWorldBtn" class="royal-btn enter-btn" disabled>
+        <span class="btn-sparkle">🌸</span>
+        <span class="btn-text">Enter My Magical World</span>
+        <span class="btn-sparkle">✨</span>
+      </button>
+
+      <div class="tc-hint">Tick the box above to enter your surprise 👑</div>
+    </div>
+  </div>
+
+  <!-- 2. Princess Scanner Result Modal (Task 1 Fixed) -->
+  <div class="scanner-result-overlay" id="scannerResultModal">
+    <div class="scanner-result-card glassmorphism">
+      <div class="result-icon-burst">
+        <span class="big-sparkle">🌸</span>
+        <i class="fa-solid fa-circle-check result-check-icon"></i>
+        <span class="big-sparkle">🌸</span>
+      </div>
+      <h3 class="result-title">Identity Verified!</h3>
+      <div class="result-princess-name">Princess Samikshaaaa</div>
+      <div class="result-badge">👑 The Cutest Girl Detected! 👑</div>
+      <p class="result-message">
+        "Verification 100% Complete! Certified as the prettiest, sweetest, and most beloved girl in the whole universe. You have unlocked all kisses and cuddles!"
+      </p>
+      <button class="royal-btn close-result-btn" id="closeScannerResultBtn">
+        <span>Next Game: Kiss Quiz!</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 3. Quiz Success Modal (Task 1 Fixed) -->
+  <div class="quiz-success-overlay" id="quizSuccessModal">
+    <div class="quiz-success-card glassmorphism">
+      <div class="quiz-success-emojis">💋 👩‍❤️‍💋‍👨 💋</div>
+      <h3 class="quiz-success-title">Correct Answer, My Baby!</h3>
+      <p class="quiz-success-text">
+        "Awww yesss! <strong>Unlimited kisses</strong> are officially booked for <strong>Samikshaaaa</strong> today, tomorrow, and forever! 😘💋"
+      </p>
+      <div class="unlimited-pass">
+        ★ UNLIMITED KISS PASS ACTIVATED FOR LIFE ★
+      </div>
+      <button class="royal-btn close-quiz-btn" id="closeQuizSuccessBtn">
+        <span>Next: Scratch Your Gifts!</span>
+        <i class="fa-solid fa-gift"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 4. Secret Vault Password Modal Popup (Task 1 Fixed) -->
+  <div class="password-modal-overlay" id="passwordModalOverlay">
+    <div class="password-modal-card glassmorphism" id="passwordModalCard">
+      <button class="password-modal-close" id="closePasswordModalBtn">&times;</button>
+      <div class="password-icon-header">
+        <i class="fa-solid fa-key-skeleton password-key-icon"></i>
+      </div>
+      <h3 class="password-modal-title">Enter Secret Password</h3>
+      <p class="password-modal-subtext">
+        What is our special couple code, Princess? 🙈
+      </p>
+
+      <div class="password-input-group">
+        <input type="text" id="vaultPasswordInput" class="custom-password-input" placeholder="Type password here..." autocomplete="off">
+      </div>
+
+      <div class="password-error-msg" id="passwordErrorMsg">
+        Incorrect password! Hint: Himanshu + Samikshaaaa = ? 💕
+      </div>
+
+      <button class="royal-btn submit-password-btn" id="submitPasswordBtn">
+        <span>Open Secret Vault</span>
+        <i class="fa-solid fa-unlock-keyhole"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 5. Lightbox Zoom Modal with Heart Burst (Task 1 & Task 2) -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close-btn" id="lightboxCloseBtn">&times;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-heart-burst" id="lightboxHeartBurst"></div>
+      <img src="" alt="Enlarged Memory" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- 6. Hidden Easter Egg Heart Secret Message Modal (Task 3) -->
+  <div class="secret-msg-overlay" id="secretHeartModal">
+    <div class="secret-msg-card glassmorphism">
+      <div class="secret-msg-crest">
+        <span class="big-sparkle">🌸</span>
+        <span class="heart-pulse-icon">💖</span>
+        <span class="big-sparkle">🌸</span>
+      </div>
+      <h3 class="secret-msg-title">You Found My Secret Heart!</h3>
+      <p class="secret-msg-body">
+        "No matter where you go in life, Samikshaaaa, and no matter how busy the days get, remember this: my heart will always beat for you. You are my home, my peace, and my greatest dream come true."
+      </p>
+      <div class="secret-msg-signature cursive-font">
+        Forever deeply in love with you,<br>
+        Himanshu ❤️
+      </div>
+      <button class="royal-btn close-secret-btn" id="closeSecretHeartBtn">
+        <span>Close with a Kiss 💋</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 7. Proposal Celebration Modal (Task 4) -->
+  <div class="proposal-modal-overlay" id="proposalCelebrationModal">
+    <div class="proposal-modal-card glassmorphism">
+      <div class="proposal-celebration-burst">🎉 💍 💖</div>
+      <h3 class="proposal-modal-title cursive-font">She Said YES!</h3>
+      <div class="proposal-badge-forever">★ OFFICIAL FOREVER PARTNERS ★</div>
+      <p class="proposal-modal-desc">
+        "I love you more than all the stars in the night sky, Princess Samikshaaaa! Happy Birthday to the girl who has my whole heart forever and ever."
+      </p>
+      <div class="proposal-lover-sign cursive-font">Yours eternally, Himanshu ❤️</div>
+      <button class="royal-btn close-proposal-btn" id="closeProposalModalBtn">
+        <span>Celebrate Together! 🥂✨</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
